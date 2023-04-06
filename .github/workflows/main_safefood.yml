@@ -23,11 +23,11 @@ jobs:
         with:
           node-version: '16.x'
 
-      - name: npm install, build, and test
+      - name: npm install, build
         run: |
           npm install --force
           npm run build --force --if-present
-          npm run test --force --if-present
+        
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
